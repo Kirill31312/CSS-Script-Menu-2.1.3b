@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script V2.1.1 (Zoom Update!)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script V2.1.3 (Mini Update!)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -22,7 +22,7 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "Welcome to CSS Script V2.0!",
+ Name = "Welcome to CSS Script V2.1.3!",
  Content = "HOTFIX UPDATE! New functions: Remove Lava Damage, and much more!",
  Image = "rbxassetid://4483345998",
  Time = 10
@@ -755,7 +755,7 @@ local Tab = Window:MakeTab({
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
-Tab:AddParagraph("Scripters","Tema_Suhar and Kirill228")
+Tab:AddParagraph("Scripters","Kirill228 & Tema_Suhar")
 Tab:AddParagraph("Name this UI Script","Orion Hub")
 local Tab = Window:MakeTab({
  Name = "All Hot-Scripts",
