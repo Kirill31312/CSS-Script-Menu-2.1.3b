@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))() local Window = OrionLib:MakeWindow({Name = "Orion", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script V2.1.3 (Mini Update!)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script V2.1.5 (Mini Update!)", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -676,6 +676,24 @@ Tab:AddButton({
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 33
  end 
 })
+Tab:AddButton({
+ Name = "Insert Block (Old Test)!",
+ Callback = function()
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 181
+ end 
+})
+Tab:AddButton({
+ Name = "Insert Empty!",
+ Callback = function()
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 0
+ end 
+})
 Tab:AddLabel("Unused songs")
 Tab:AddParagraph("How to listen unused songs","First, go in Level Creator and click on the red music on topbar, click on buttons in script and songs id put automatically!")
 Tab:AddButton({
@@ -820,7 +838,7 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 Tab:AddButton({
- Name = "Zone name fast edit text",
+ Name = "Zone name fast edit text (not working!!!)",
  Callback = function()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
  end 
