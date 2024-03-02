@@ -369,38 +369,42 @@ Tab:AddToggle({
  end
 })
 Tab:AddDropdown({
- Name = "Zoom (x1-8)",
+ Name = "Zoom (2-0.5)",
  Default = "1x",
- Options = {"1x", "2x", "4x", "6x", "8x"},
+ Options = {"2", "1", "0.75", "0.5"},
  Callback = function(ZoomValueing)
  if ZoomValueing == "1x" then
  if antiError == 0 then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 3.5
  end
- elseif ZoomValueing == "2x" then
+ elseif ZoomValueing == "2" then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 2
- elseif ZoomValueing == "4x" then
+ elseif ZoomValueing == "1" then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 1
- elseif ZoomValueing == "6x" then
+ elseif ZoomValueing == "0.75" then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.75
- elseif ZoomValueing == "8x" then
+ elseif ZoomValueing == "0.5" then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.5
  end
  end 
 })
 Tab:AddDropdown({
- Name = "Zoom (x10-12)",
+ Name = "Zoom (0.25-0.001)",
  Default = "1x",
- Options = {"10x", "12x"},
+ Options = {"0.25", "0.10", "0.05", "0.001"},
  Callback = function(ZoomValueing)
  if ZoomValueing == "1x" then
  if antiError == 0 then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 3.5
  end
- elseif ZoomValueing == "10x" then
+ elseif ZoomValueing == "0.25" then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.25
- elseif ZoomValueing == "12x" then
- game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0
+ elseif ZoomValueing == "0.10" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.10
+ elseif ZoomValueing == "0.05" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.05
+ elseif ZoomValueing == "0.001" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.001
  end
  end 
 })
