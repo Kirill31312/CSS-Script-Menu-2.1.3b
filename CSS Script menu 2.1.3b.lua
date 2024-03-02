@@ -369,9 +369,9 @@ Tab:AddToggle({
  end
 })
 Tab:AddDropdown({
- Name = "Zoom",
+ Name = "Zoom (x1-8)",
  Default = "1x",
- Options = {"1x", "2x", "4x", "6x", "8x", "10x", "12x"},
+ Options = {"1x", "2x", "4x", "6x", "8x"},
  Callback = function(ZoomValueing)
  if ZoomValueing == "1x" then
  if antiError == 0 then
@@ -385,6 +385,18 @@ Tab:AddDropdown({
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.75
  elseif ZoomValueing == "8x" then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.5
+ end
+ end 
+})
+Tab:AddDropdown({
+ Name = "Zoom (x10-12)",
+ Default = "1x",
+ Options = {"10x", "12x"},
+ Callback = function(ZoomValueing)
+ if ZoomValueing == "1x" then
+ if antiError == 0 then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 3.5
+ end
  elseif ZoomValueing == "10x" then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.25
  elseif ZoomValueing == "12x" then
