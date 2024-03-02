@@ -22,8 +22,8 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "Welcome to CSS Script V2.1.3!",
- Content = "HOTFIX UPDATE! New functions: Remove Lava Damage, and much more!",
+ Name = "Welcome to CSS Script V2.1.5!",
+ Content = "SMALL UPDATE! New function:Insert Old Test Block And Empty+Other Players!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -385,6 +385,10 @@ Tab:AddDropdown({
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.75
  elseif ZoomValueing == "8x" then
  game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.5
+ elseif ZoomValueing == "10x" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0.25
+ elseif ZoomValueing == "12x" then
+ game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.UIScale.Scale = 0
  end
  end 
 })
@@ -775,6 +779,125 @@ Tab:AddButton({
  Callback = function()
  game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
  game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_Tiny"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Sonic_S1",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S1"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Sonic_S1_Rose",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S1_Rose"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Sonic_SCD",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_SCD"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Sonic_SCD_Rose",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_SCD_Rose"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Sonic_S2",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S2"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Sonic_S2_Ashura",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S2_Ashura"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Sonic_S3",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S3"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Sonic_S3_Red",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Sonic_S3_Red"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Tails_S3",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Tails_S3"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Knuckles_S3",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Knuckles_S3"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Knuckles_S3_Blue",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Knuckles_S3_Blue"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Amy",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Amy"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Metal_Sonic",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Metal_Sonic"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Rouge_S1",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Rouge_S1"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Super_Sonic",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Super_Sonic"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Dr_Robotnik",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Dr_Robotnik"
+ end 
+})
+Tab:AddButton({
+ Name = "To be Shadow_S3",
+ Callback = function()
+ game.ReplicatedStorage.Players:WaitForChild(game.Players.LocalPlayer.Name):WaitForChild("Character")
+ game.ReplicatedStorage.Players[game.Players.LocalPlayer.Name].Character.Value = "Shadow_S3"
  end 
 })
 local Tab = Window:MakeTab({
