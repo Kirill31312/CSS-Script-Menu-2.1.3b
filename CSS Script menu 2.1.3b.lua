@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 })
 OrionLib:MakeNotification({
  Name = "Welcome to CSS Script Revolution V0.15!",
- Content = "SMALL UPDATE! New function:Insert Old Test Block And Empty+Other Players!",
+ Content = "SMALL UPDATE! New function:Insert Old Test Block And Empty+Other Players+Bonus Zoom!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
