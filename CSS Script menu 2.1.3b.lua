@@ -521,10 +521,17 @@ local Tab = Window:MakeTab({
 })
 Tab:AddLabel("Secret Functions")
 Tab:AddButton({
- Name = "Water Transfare",
+ Name = "Water Transfare On",
  Callback = function()
 
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/HBSNX/main/Xjwxn"))()
+ end
+})
+Tab:AddButton({
+ Name = "Water Transfare Off",
+ Callback = function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Wixbe/main/Eienr"))()
  end
 })
 Tab:AddLabel("Unused objects")
