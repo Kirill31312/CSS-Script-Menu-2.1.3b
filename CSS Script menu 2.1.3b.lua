@@ -534,6 +534,13 @@ Tab:AddButton({
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Wixbe/main/Eienr"))()
  end
 })
+Tab:AddButton({
+ Name = "Rise Speed On",
+ Callback = function()
+
+ loadstring(game:HttpGet(""))()
+ end
+})
 Tab:AddLabel("Unused objects")
 Tab:AddParagraph("How to use objects","First, click on the button on which you want to insert the object, then, pull the ring out of the object list, put it on, then click on the button in the game (Save & Exit) then select the level at which you put the ring, and it will become the object you clicked on")
 Tab:AddParagraph("House objects")
