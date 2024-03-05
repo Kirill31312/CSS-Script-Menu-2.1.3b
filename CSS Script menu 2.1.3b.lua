@@ -538,7 +538,7 @@ Tab:AddButton({
  Name = "Rise Speed On",
  Callback = function()
 
- loadstring(game:HttpGet(""))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Wixbe/main/Sjwjze"))()
  end
 })
 Tab:AddLabel("Unused objects")
