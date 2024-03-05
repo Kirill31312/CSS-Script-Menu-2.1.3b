@@ -22,7 +22,7 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "Welcome to CSS Script Revolution V0.15!",
+ Name = "CSS Script Revolution V0.15!",
  Content = "Mini Update! New function:Transpery and Rise Speed Water!",
  Image = "rbxassetid://4483345998",
  Time = 10
@@ -539,6 +539,13 @@ Tab:AddButton({
  Callback = function()
 
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Wixbe/main/Sjwjze"))()
+ end
+})
+Tab:AddButton({
+ Name = "Rise Speed Off",
+ Callback = function()
+
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Wixbe/main/Iek2nd"))()
  end
 })
 Tab:AddLabel("Unused objects")
