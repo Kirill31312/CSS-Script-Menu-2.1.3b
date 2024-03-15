@@ -18,13 +18,13 @@ local BeatLevelInst =
  }
 local Tab = Window:MakeTab({
  Name = "Menu",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750552678",
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
  Name = "CSS Script Revolution V0.15!",
- Content = "Mini Update! New function:Transpery and Rise Speed Water!",
- Image = "rbxassetid://4483345998",
+ Content = "Mini Update! New function:Icons!",
+ Image = "rbxassetid://16750320478",
  Time = 10
 })
 Tab:AddParagraph("How to correct teleport to unused zones","Use this functions only on Main Menu!")
@@ -316,7 +316,7 @@ Tab:AddButton({
 })
 local Tab = Window:MakeTab({
  Name = "Game",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750524374",
  PremiumOnly = false
 })
 Tab:AddLabel("Game functions")
@@ -481,7 +481,7 @@ Tab:AddButton({
 })
 local Tab = Window:MakeTab({
  Name = "Manage My Levels",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750518559",
  PremiumOnly = false
 })
 Tab:AddDropdown({
@@ -516,7 +516,7 @@ Tab:AddButton({
 })
 local Tab = Window:MakeTab({
  Name = "Level Creator",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750364934",
  PremiumOnly = false
 })
 Tab:AddLabel("Secret Functions")
@@ -784,7 +784,7 @@ Tab:AddButton({
 Tab:AddParagraph("Warning! If want more songs here...","If you want more songs here, go to the section (Suggestions)")
 local Tab = Window:MakeTab({
  Name = "OP Functions",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750320478",
  PremiumOnly = false
 })
 Tab:AddLabel("Instant Beating Any Zone")
@@ -912,14 +912,14 @@ Tab:AddButton({
 })
 local Tab = Window:MakeTab({
  Name = "Creators",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750606850",
  PremiumOnly = false
 })
 Tab:AddParagraph("Scripters","Kirill228 & Tema_Suhar")
 Tab:AddParagraph("Name this UI Script","Orion Hub")
 local Tab = Window:MakeTab({
  Name = "All Hot-Scripts",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750638595",
  PremiumOnly = false
 })
 Tab:AddButton({
@@ -955,7 +955,7 @@ Tab:AddButton({
 })
 local Tab = Window:MakeTab({
  Name = "Suggestions",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750508696",
  PremiumOnly = false
 })
 Tab:AddParagraph("How use ideas about add new functions?","If you want ideas to add new function, then click in Button here and you will get a link to a video where to write your ideas")
@@ -967,7 +967,7 @@ Tab:AddButton({
 })
 local Tab = Window:MakeTab({
  Name = "Coming Soon in 2.2.0 or 2.3.0",
- Icon = "rbxassetid://4483345998",
+ Icon = "rbxassetid://16750508696",
  PremiumOnly = false
 })
 Tab:AddButton({
