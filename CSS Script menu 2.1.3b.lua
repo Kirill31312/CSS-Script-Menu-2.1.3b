@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))() local Window = OrionLib:MakeWindow({Name = "Orion", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.175", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.2", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -22,8 +22,8 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "CSS Script Revolution V0.15!",
- Content = "Mini Update! New function:Transpery and Rise Speed Water!",
+ Name = "CSS Script Revolution V0.2!",
+ Content = "New Update!Added More Music And ID Objects!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -734,51 +734,282 @@ Tab:AddButton({
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 181
  end 
 })
-Tab:AddButton({
- Name = "Insert Empty!",
- Callback = function()
- Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+Tab:AddToggle({
+	Name = "Insert ID Object!",
+	Callback = function(Value)
+    Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
- game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 0
- end 
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = print(Value)
+	end    
 })
-Tab:AddLabel("Unused songs")
+Tab:AddLabel("Unused/Cutten songs")
 Tab:AddParagraph("How to listen unused songs","First, go in Level Creator and click on the red music on topbar, click on buttons in script and songs id put automatically!")
+Tab:AddLabel("House Zone")
 Tab:AddButton({
- Name = "Insert Battle music by Final Fantasy X (Intro)!",
+ Name = "House Music 1",
  Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "287414673"
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1551374958"
  end 
 })
 Tab:AddButton({
- Name = "Insert Battle music by Final Fantasy X (Loop)!",
+ Name = "House Music 2",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "150110636"
+ end 
+})
+Tab:AddButton({
+ Name = "House Music 3",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1551374073"
+ end 
+})
+Tab:AddButton({
+ Name = "House Music 4",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1551374625"
+ end 
+})
+Tab:AddButton({
+ Name = "House Music 5",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1553436267"
+ end 
+})
+Tab:AddLabel("Dr.Robotnik's Mean Bean Machine")
+Tab:AddButton({
+ Name = "Multiplayer Versus",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "242610832"
+ end 
+})
+Tab:AddButton({
+ Name = "Exercise Mode",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "284747270"
+ end 
+})
+Tab:AddButton({
+ Name = "Stages 1-4",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "284750073"
+ end 
+})
+Tab:AddLabel("Final Fantasy X")
+Tab:AddButton({
+ Name = "Battle",
  Callback = function()
  game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "287414770"
  end 
 })
+Tab:AddLabel("A Dash For Freedom")
 Tab:AddButton({
- Name = "Insert A Dash For Freedom music by Fabian Del Priore Rapture (Intro)!",
- Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "2413255224"
- end 
-})
-Tab:AddButton({
- Name = "Insert A Dash For Freedom music by Fabian Del Priore Rapture (Loop)!",
+ Name = "A Dash For Freedom!",
  Callback = function()
  game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "2413255944"
  end 
 })
+Tab:AddLabel("Undertale")
 Tab:AddButton({
- Name = "Insert A Asgore by Undertale (Intro)!",
+ Name = "Asgore!",
  Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "360710833"
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "360710888"
  end 
 })
 Tab:AddButton({
- Name = "Insert A Asgore by Undertale (Loop)!",
+ Name = "Finale!",
  Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "360710888"
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "321055906"
+ end 
+})
+Tab:AddButton({
+ Name = "Gaster's Theme!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "582435167"
+ end 
+})
+Tab:AddButton({
+ Name = "Ghost Fight!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "473070704"
+ end 
+})
+Tab:AddButton({
+ Name = "Hopes and Dreams!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "382688202"
+ end 
+})
+Tab:AddButton({
+ Name = "Run!!!!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "461923735"
+ end 
+})
+Tab:AddButton({
+ Name = "Dog Song!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "429383704"
+ end 
+})
+Tab:AddLabel("Sonic The Hedgehog 1")
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7456593376"
+ end 
+})
+Tab:AddButton({
+ Name = "Act Clear!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "314059232"
+ end 
+})
+Tab:AddButton({
+ Name = "Title Screen!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "347479590"
+ end 
+})
+Tab:AddLabel("Sonic The Hedgehog 2")
+Tab:AddButton({
+ Name = "Hidden Palace Zone (Intro)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "429388470"
+ end 
+})
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7456628353"
+ end 
+})
+Tab:AddLabel("Sonic & Knuckles")
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7456394738"
+ end 
+})
+Tab:AddLabel("Sonic 3 & Knuckles")
+Tab:AddButton({
+ Name = "Drown!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "314059552"
+ end 
+})
+Tab:AddButton({
+ Name = "Emerald!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "304801042"
+ end 
+})
+Tab:AddButton({
+ Name = "Act Cleared!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "295636697"
+ end 
+})
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7456630275"
+ end 
+})
+Tab:AddLabel("Sonic The Hedgehog CD")
+Tab:AddButton({
+ Name = "Game Over (US)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "302428675"
+ end 
+})
+Tab:AddButton({
+ Name = "Speed Up!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7354973962"
+ end 
+})
+Tab:AddButton({
+ Name = "Super Sneakers!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7354988616"
+ end 
+})
+Tab:AddButton({
+ Name = "Zone Clear!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7423170639"
+ end 
+})
+Tab:AddButton({
+ Name = "Stage Clear!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7423204753"
+ end 
+})
+Tab:AddButton({
+ Name = "Invincible!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7471698482"
+ end 
+})
+Tab:AddButton({
+ Name = "Invincibility!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "7471720264"
+ end 
+})
+Tab:AddLabel("CSS Music")
+Tab:AddButton({
+ Name = "Title Screen!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "313139233"
+ end 
+})
+Tab:AddButton({
+ Name = "Build Theme!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "3524195336"
+ end 
+})
+Tab:AddButton({
+ Name = "Main Menu!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "4623689274"
+ end 
+})
+Tab:AddLabel("Rapina Bros")
+Tab:AddButton({
+ Name = "Reach To The Top!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "2544859859"
+ end 
+})
+Tab:AddLabel("Xinon")
+Tab:AddButton({
+ Name = "Heart Warming Story!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "291899990"
+ end 
+})
+Tab:AddLabel("Kitsune 2")
+Tab:AddButton({
+ Name = "Goodnight (Ducktales)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "230440993"
+ end 
+})
+Tab:AddButton({
+ Name = "Rainbow Tylenol!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "318790343"
+ end 
+})
+Tab:AddLabel("Knuckle Joe")
+Tab:AddButton({
+ Name = "The Times We Had!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "291053059"
  end 
 })
 Tab:AddParagraph("Warning! If want more songs here...","If you want more songs here, go to the section (Suggestions)")
