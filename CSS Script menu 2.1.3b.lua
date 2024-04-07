@@ -734,7 +734,11 @@ Tab:AddButton({
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 181
  end 
 })
-Tab:AddLabel("Unused/Cutten songs")
+local Tab = Window:MakeTab({
+ Name = "Unused/Cutten Music",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
 Tab:AddParagraph("How to listen unused songs","First, go in Level Creator and click on the red music on topbar, click on buttons in script and songs id put automatically!")
 Tab:AddLabel("House Zone")
 Tab:AddButton({
