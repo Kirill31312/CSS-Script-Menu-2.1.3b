@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 })
 OrionLib:MakeNotification({
  Name = "CSS Script Revolution V0.2!",
- Content = "New Update!Added More Music And ID Objects!",
+ Content = "New Update!Added More Music!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -733,15 +733,6 @@ Tab:AddButton({
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 181
  end 
-})
-Tab:AddToggle({
-	Name = "Insert ID Object!",
-	Callback = function(Value)
-    Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
- game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
- game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
- game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = print(Value)
-	end    
 })
 Tab:AddLabel("Unused/Cutten songs")
 Tab:AddParagraph("How to listen unused songs","First, go in Level Creator and click on the red music on topbar, click on buttons in script and songs id put automatically!")
