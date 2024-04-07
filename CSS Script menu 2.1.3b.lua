@@ -735,11 +735,11 @@ Tab:AddButton({
  end 
 })
 local Tab = Window:MakeTab({
- Name = "Unused/Cutten Music",
+ Name = "Cutten Music",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
-Tab:AddParagraph("How to listen unused songs","First, go in Level Creator and click on the red music on topbar, click on buttons in script and songs id put automatically!")
+Tab:AddParagraph("How to listen cutten music","First, go in Level Creator and click on the red music on topbar, click on buttons in script and songs id put automatically!")
 Tab:AddLabel("House Zone")
 Tab:AddButton({
  Name = "House Music 1",
@@ -1192,7 +1192,7 @@ Tab:AddButton({
  end 
 })
 local Tab = Window:MakeTab({
- Name = "Coming Soon in 2.2.0 or 2.3.0",
+ Name = "CS in future updates",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
