@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))() local Window = OrionLib:MakeWindow({Name = "Orion", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.2", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.21", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -1155,10 +1155,10 @@ Tab:AddButton({
  end 
 })
 Tab:AddButton({
- Name = "Open Universal OP Dex Explorer V4 (Mobile support!)",
+ Name = "Open Dex Explorer V2",
  Callback = function()
  getgenv().Key = "Bash"
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3AIY%20Dex",true))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()",true))()
  end 
 })
 Tab:AddButton({
@@ -1192,144 +1192,20 @@ Tab:AddButton({
  end 
 })
 local Tab = Window:MakeTab({
- Name = "CS in future updates",
- Icon = "rbxassetid://4483345998",
+  Name = "CSS Script Premium"
+  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
+Tab:AddParagraph("This script is being tested and is not fully executed!")
 Tab:AddButton({
- Name = "Zone name fast edit text (not working!!!)",
+ Name = "Open CSS Script Premium",
  Callback = function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpySource.lua"))()
+ loadstring(game:HttpGet("https://pastebin.com/raw/6diav6A2", true))()
  end 
 })
--- ColorPicker:Set(Color3.fromRGB(255,255,255))
-
---Slider:Set(2)
---Tab:AddLabel("Label")
---CoolLabel:Set("Label New!")
---Tab:AddParagraph("Paragraph","Paragraph Content")
--- CoolParagraph:Set("Paragraph New!")
-
--- Bind:Set(Enum.KeyCode.E)
--- Dropdown:Refresh(List<table>,true)
---Dropdown:Set("dropdown option")
-OrionLib:Init()
--- destroying the interface: OrionLib:Destroy()
--- Coming Soon:
---Tab:AddColorpicker({
--- Name = "Colorpicker",
--- Default = Color3.fromRGB(255, 0, 0),
--- Callback = function(Value)
--- print(Value)
--- end 
---})
--- Toggle is soon --
---Tab:AddToggle({
--- Name = "This is a toggle!",
--- Default = false,
--- Callback = function(Value)
--- print(Value)
--- end 
---})
---Tab:AddSlider({
--- Name = "Slider",
--- Min = 0,
--- Max = 20,
--- Default = 5,
--- Color = Color3.fromRGB(255,255,255),
--- Increment = 1,
--- ValueName = "bananas",
--- Callback = function(Value)
--- print(Value)
--- end 
---})
---Tab:AddTextbox({
--- Name = "Textbox",
--- Default = "default box input",
--- TextDisappear = true,
--- Callback = function(Value)
--- print(Value)
--- end 
---})
---Tab:AddDropdown({
--- Name = "Dropdown",
--- Default = "1",
--- Options = {"1", "2"},
--- Callback = function(Value)
--- print(Value)
--- end 
---})
---Tab:AddBind({
--- Name = "Bind",
--- Default = Enum.KeyCode.E,
--- Hold = false,
--- Callback = function()
--- print("press")
--- end 
---})() 
--- ColorPicker:Set(Color3.fromRGB(255,255,255))
-
---Slider:Set(2)
---Tab:AddLabel("Label")
---CoolLabel:Set("Label New!")
---Tab:AddParagraph("Paragraph","Paragraph Content")
--- CoolParagraph:Set("Paragraph New!")
-
--- Bind:Set(Enum.KeyCode.E)
--- Dropdown:Refresh(List<table>,true)
---Dropdown:Set("dropdown option")
-OrionLib:Init()
--- destroying the interface: OrionLib:Destroy()
--- Coming Soon:
---Tab:AddColorpicker({
--- Name = "Colorpicker",
--- Default = Color3.fromRGB(255, 0, 0),
--- Callback = function(Value)
--- print(Value)
--- end 
---})
--- Toggle is soon --
---Tab:AddToggle({
--- Name = "This is a toggle!",
--- Default = false,
--- Callback = function(Value)
--- print(Value)
--- end 
---})
---Tab:AddSlider({
--- Name = "Slider",
--- Min = 0,
--- Max = 20,
--- Default = 5,
--- Color = Color3.fromRGB(255,255,255),
--- Increment = 1,
--- ValueName = "bananas",
--- Callback = function(Value)
--- print(Value)
--- end 
---})
---Tab:AddTextbox({
--- Name = "Textbox",
--- Default = "default box input",
--- TextDisappear = true,
--- Callback = function(Value)
--- print(Value)
--- end 
---})
---Tab:AddDropdown({
--- Name = "Dropdown",
--- Default = "1",
--- Options = {"1", "2"},
--- Callback = function(Value)
--- print(Value)
--- end 
---})
---Tab:AddBind({
--- Name = "Bind",
--- Default = Enum.KeyCode.E,
--- Hold = false,
--- Callback = function()
--- print("press")
--- end 
---})
-antiError = 0
+Tab:AddButton({
+ Name = "Get Key",
+ Callback = function()
+ setclipboard(tostring("46ya08fm"))
+ end 
+})
