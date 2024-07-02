@@ -1158,7 +1158,7 @@ Tab:AddButton({
  Name = "Open Dex Explorer V2",
  Callback = function()
  getgenv().Key = "Bash"
- loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()",true))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()
  end 
 })
 Tab:AddButton({
@@ -1189,23 +1189,5 @@ Tab:AddButton({
  Name = "Get Link on the video",
  Callback = function()
  setclipboard(tostring("https://youtu.be/d1wh-dD-A3k?si=jpYMyc323WD1wejM"))
- end 
-})
-local Tab = Window:MakeTab({
-  Name = "CSS Script Premium"
-  Icon = "rbxassetid://4483345998",
- PremiumOnly = false
-})
-Tab:AddParagraph("This script is being tested and is not fully executed!")
-Tab:AddButton({
- Name = "Open CSS Script Premium",
- Callback = function()
- loadstring(game:HttpGet("https://pastebin.com/raw/6diav6A2", true))()
- end 
-})
-Tab:AddButton({
- Name = "Get Key",
- Callback = function()
- setclipboard(tostring("46ya08fm"))
  end 
 })
