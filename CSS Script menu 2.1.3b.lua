@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source", true))()
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.21", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.3", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 })
 OrionLib:MakeNotification({
  Name = "CSS Script Revolution V0.2!",
- Content = "New Update!Added More Music!",
+ Content = "New Update!Added New Objects And Texture Packs!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
