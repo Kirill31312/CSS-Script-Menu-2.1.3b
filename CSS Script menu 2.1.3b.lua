@@ -479,6 +479,52 @@ Tab:AddButton({
  game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Engine.Disabled = false
  end 
 })
+Tab:AddParagraph("Texture Packs!")
+Tab:AddButton({
+ Name = "Enable Basic Texture Pack!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 8352336106
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 8352336106
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 8352336106
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 8352336106
+ end 
+})
+Tab:AddButton({
+ Name = "Enable Sonic 1 Texture Pack!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 13804826000
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804826000
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804826000
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804826000
+ end 
+})
+Tab:AddButton({
+ Name = "Enable Sonic 2 Texture Pack!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 13804828820
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804828820
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804828820
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804828820
+ end 
+})
+Tab:AddButton({
+ Name = "Enable Sonic 3 Texture Pack!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 13804830596
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804830596
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804830596
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804830596
+ end 
+})
+Tab:AddButton({
+ Name = "Enable Sonic CD Texture Pack!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S3.Value = 13804832490
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804832490
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804832490
+ game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804832490
+ end 
+})
 local Tab = Window:MakeTab({
  Name = "Manage My Levels",
  Icon = "rbxassetid://4483345998",
