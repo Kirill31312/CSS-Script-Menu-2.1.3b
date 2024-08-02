@@ -561,6 +561,61 @@ Tab:AddButton({
  end 
 })
 local Tab = Window:MakeTab({
+ Name = "Sound Test",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddLabel("Menu Sounds")
+Tab:AddButton({
+ Name = "Play Sound Back!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].bork.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Warp!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].warp.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Illegal!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].buzzer.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Checkpoint!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].checkpoint.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Sonic Can Super Sonic!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").LevelSelect.Backdrop.Screen["Level Select Script"].medal.Playing = true
+ end
+})
+Tab:AddLabel("Baldi's Sounds")
+Tab:AddButton({
+ Name = "Play Sound Oh, Hi!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.baldihi.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Slap Ruler!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.baldislap.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Baldi Jumpscare!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.baldiscare.Playing = true
+ end
+})
+local Tab = Window:MakeTab({
  Name = "Level Creator",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
