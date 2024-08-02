@@ -615,6 +615,112 @@ Tab:AddButton({
  game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.baldiscare.Playing = true
  end
 })
+Tab:AddLabel("Sonic CD Sounds")
+Tab:AddButton({
+ Name = "Play Sound Jump!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.jump2.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Yes!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.ExtraLifeCD.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Drown!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.scd_drown.Playing = true
+ end
+})
+Tab:AddLabel("Sonic 1 Sounds")
+Tab:AddButton({
+ Name = "Play Sound Sonic GAME OVER!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.GameOverS1.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Sonic GAME OVER!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.GameOverS1.Playing = true
+ end
+})
+Tab:AddLabel("Sonic 3 Sounds")
+Tab:AddButton({
+ Name = "Play Sound Tails Fly!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fly.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Stop Sound Tails Fly!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fly.Playing = false
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Tails Tfly!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.tfly.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Stop Sound Tails Tfly!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.tfly.Playing = false
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound AIZ Rock Break!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.Break.Playing = true
+ end
+})
+Tab:AddLabel("Other Sounds")
+Tab:AddButton({
+ Name = "Play Sound Jump!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.jump.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Sonic.EXE Laugh!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.SonicExeLaugh.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Sonic.EXE Exit!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.die2.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Bumper!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.Bumper.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Ring!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.ring.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Died On Spikes!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.spike_hit.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Losed Ring!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.RingLose.Playing = true
+ end
+})
 local Tab = Window:MakeTab({
  Name = "Level Creator",
  Icon = "rbxassetid://4483345998",
