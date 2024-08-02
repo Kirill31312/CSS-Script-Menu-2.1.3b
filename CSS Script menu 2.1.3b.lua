@@ -721,6 +721,90 @@ Tab:AddButton({
  game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.RingLose.Playing = true
  end
 })
+Tab:AddButton({
+ Name = "Play Sound Blue Sphere Eat!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.Sphere.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound House Zone Moving Face!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.face_move.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Glass Bumper Crash!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.crash.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Level Select Selecting!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.select.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Dead Sound!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.oof.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Eggman Jump!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.jump3.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Point!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.point.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Warp 2!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.warp.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Spring!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.spring.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Break!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.break2.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Electric Shield!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshield.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Get Electric Shield!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Flame Shield!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fshield.Playing = true
+ end
+})
+Tab:AddButton({
+ Name = "Play Sound Get Flame Shield!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fshieldget.Playing = true
+ end
+})
 local Tab = Window:MakeTab({
  Name = "Level Creator",
  Icon = "rbxassetid://4483345998",
