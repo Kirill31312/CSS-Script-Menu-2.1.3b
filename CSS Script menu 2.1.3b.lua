@@ -561,10 +561,11 @@ Tab:AddButton({
  end 
 })
 local Tab = Window:MakeTab({
- Name = "Sound Test",
+ Name = "Local Functions",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
+Tab:AddLabel("Sounds")
 Tab:AddLabel("Menu Sounds")
 Tab:AddButton({
  Name = "Play Sound Back!",
@@ -803,6 +804,78 @@ Tab:AddButton({
  Name = "Play Sound Get Flame Shield!",
  Callback = function()
  game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.fshieldget.Playing = true
+ end
+})
+Tab:AddLabel("Skin Changer")
+Tab:AddButton({
+ Name = "Sonic 1 to Sonic Rose!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Sonic_S1"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Sonic_S1_Rose"].Name = "Sonic_S1"
+ end
+})
+Tab:AddButton({
+ Name = "Sonic CD to Sonic CD Rose!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Sonic_SCD"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Sonic_SCD_Rose"].Name = "Sonic_SCD"
+ end
+})
+Tab:AddButton({
+ Name = "Sonic 2 to Ashura!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Sonic_S2"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Sonic_S2_Ashura"].Name = "Sonic_S2"
+ end
+})
+Tab:AddButton({
+ Name = "Sonic 3 to Sonic 3 Red!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Sonic_S3"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Sonic_S3_Red"].Name = "Sonic_S3"
+ end
+})
+Tab:AddButton({
+ Name = "Knuckles to Knuckles Blue!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Knuckles_S3"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Knuckles_S3_Blue"].Name = "Knuckles_S3"
+ end
+})
+Tab:AddButton({
+ Name = "Sonic CD to Sonic.EXE!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Sonic_SCD"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Sonic_EXE"].Name = "Sonic_SCD"
+ game:GetService("ReplicatedStorage").Animations["Sonic_SCD"]:Destroy()
+ game:GetService("ReplicatedStorage").Animations["Sonic_EXE"].Name = "Sonic_SCD"
+ end
+})
+Tab:AddButton({
+ Name = "Metal Sonic to Orange Mushroom!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Metal_Sonic"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Mushroom_Orange"].Name = "Metal_Sonic"
+ game:GetService("ReplicatedStorage").Animations["Metal_Sonic"]:Destroy()
+ game:GetService("ReplicatedStorage").Animations["Mushroom_Orange"].Name = "Metal_Sonic"
+ end
+})
+Tab:AddButton({
+ Name = "Shadow to Tiny Sonic!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Shadow_S3"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Sonic_Tiny"].Name = "Shadow_S3"
+ game:GetService("ReplicatedStorage").Animations["Shadow_S3"]:Destroy()
+ game:GetService("ReplicatedStorage").Animations["Sonic_Tiny"].Name = "Shadow_S3"
+ end
+})
+Tab:AddButton({
+ Name = "Dr Robotnik to Baldi!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["Dr_Robotnik"]:Destroy()
+ game:GetService("ReplicatedStorage").Objects["Baldi"].Name = "Dr_Robotnik"
+ game:GetService("ReplicatedStorage").Animations["Dr_Robotnik"]:Destroy()
+ game:GetService("ReplicatedStorage").Animations["Baldi"].Name = "Dr_Robotnik"
  end
 })
 local Tab = Window:MakeTab({
