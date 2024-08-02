@@ -878,6 +878,85 @@ Tab:AddButton({
  game:GetService("ReplicatedStorage").Animations["Baldi"].Name = "Dr_Robotnik"
  end
 })
+Tab:AddLabel("Delete Objects")
+Tab:AddButton({
+ Name = "Delete Test Pushable Block!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Block_Pushable"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Collapsing Bridge!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Collapsing_Bridge"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Bridge 8 Logs!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Bridge_08"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Bridge 12 Logs!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Bridge_12"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Platform Collapse!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform_Collapse"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Staircase!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Staircase"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Staircase 2!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Staircase_Rotating_1004"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Staircase 4!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Staircase_Rotating_1234"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Platform Bumper Up-Down 256px!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform_Bumper_R256"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Platform Bumper Up-Down 128px!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform_Bumper_D128"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Platform Bumper Right-Left 128px!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform_Bumper_R128"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Breakable Wall Middle!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Breakable_Wall_Middle"]:Destroy()
+ end
+})
+Tab:AddButton({
+ Name = "Delete Test Platform!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects["TZ__Platform"]:Destroy()
+ end
+})
 local Tab = Window:MakeTab({
  Name = "Level Creator",
  Icon = "rbxassetid://4483345998",
