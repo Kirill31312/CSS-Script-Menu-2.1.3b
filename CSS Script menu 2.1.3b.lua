@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source", true))()
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.4", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.5", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -22,8 +22,8 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "CSS Script Revolution V0.4!",
- Content = "New Update!Added Sounds,Skin Changer And Remover Objects!",
+ Name = "CSS Script Revolution V0.5!",
+ Content = "New Update!Added Heights,Texture Pack EXE And More!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -454,12 +454,6 @@ Tab:AddToggle({
  end
  end 
 })
-Tab:AddButton({
- Name = "Destroy ALL objects!",
- Callback = function()
- game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.World.Objects:Destroy()
- end 
-})
 Tab:AddToggle({
  Name = "Enable/Disable Lava",
  Default = false,
@@ -477,6 +471,12 @@ Tab:AddButton({
  game.ReplicatedStorage.Game.Backdrop.Main.Engine["break1"]:Play()
  game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Engine.Disabled = true
  game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game").Backdrop.Main.Engine.Disabled = false
+ end 
+})
+Tab:AddButton({
+ Name = "Freeze Asteron!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects.Asteron.Tick.Value = math.huge
  end 
 })
 Tab:AddParagraph("Texture Packs!")
@@ -523,6 +523,44 @@ Tab:AddButton({
  game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S2.Value = 13804832490
  game:GetService("ReplicatedStorage").Spritesheets.Objects_General_S1.Value = 13804832490
  game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804832490
+ end 
+})
+Tab:AddParagraph("Huge Texture Packs!")
+Tab:AddButton({
+ Name = "Enable Sonic EXE Texture Pack!",
+ Callback = function()
+ while game:GetService("RunService").RenderStepped:Wait() do
+	if BrokePack == true then break end
+	game:GetService("ReplicatedStorage").Objects.Sonic_S1.Sprite.Image = "rbxassetid://8351052419"
+	if game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.SoundId == "rbxassetid://304472067" then
+	game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.PlaybackSpeed = 1
+	game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Intro.TimePosition = 9999
+	game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.SoundId = "rbxassetid://1427189017"
+	elseif game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.SoundId ~= "rbxassetid://1427189017" then
+ game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.PlaybackSpeed = 0.5
+	end
+	for i,v in pairs(game.Players.LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Tiles:GetChildren()) do
+	v.ImageColor3 = Color3.new(1, 0, 0)
+	end
+	for i,v in pairs(game.Players.LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.Engine:GetChildren()) do
+	if v.ClassName == "Sound" then
+	v.PlaybackSpeed = 0.75
+	end
+	end
+	for i,v in pairs(game.Players.LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Objects:GetDescendants()) do
+	if v.ClassName == "ImageLabel" then
+	v.ImageColor3 = Color3.new(1, 0, 0)
+ end 
+})
+   Tab:AddButton({
+ Name = "Disable Sonic EXE Texture Pack!",
+ Callback = function()
+ BrokePack = true
+	wait(0.5)
+	game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.PlaybackSpeed = 1
+	BrokePack = false
+	game:GetService("ReplicatedStorage").Objects.Sonic_S1.Sprite.Image = "rbxassetid://8769231388"
+	game:GetService("ReplicatedStorage").Objects.Sonic_SCD.Sprite.Image = "rbxassetid://8769231388"
  end 
 })
 local Tab = Window:MakeTab({
@@ -2003,7 +2041,7 @@ local Tab = Window:MakeTab({
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
-Tab:AddLabel("Instant Beating Any Zone")
+Tab:AddLabel("OP Function")
 Tab:AddButton({
  Name = "Beat Zone Now in One Click!",
  Callback = function()
