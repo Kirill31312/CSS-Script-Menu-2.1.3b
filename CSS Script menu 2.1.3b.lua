@@ -880,6 +880,15 @@ Tab:AddButton({
 })
 Tab:AddLabel("Delete Objects")
 Tab:AddButton({
+ Name = "Delete All Objects (Without Player)!",
+ Callback = function()
+ game:GetService("ReplicatedStorage").Objects.Amy.Sprite.SpriteDirY:Clone().Parent = game.ReplicatedStorage.Objects.Ring.Sprite
+ for i,v in pairs(game.ReplicatedStorage.Objects:GetChildren()) do
+ if v.Name ~= "Sonic_S1" and v.Name ~= "PathSwapper" and v.Name ~= "PathSwapper2" and v.Name ~= "Ring_Spark" and v.Name ~= "Ring_Goal" and v.Name ~= "Ring_Bouncing" and v.Name ~= "Ring" and v.Name ~= "Sonic_S1_Rose" and v.Name ~= "Sonic_S2" and v.Name ~= "Sonic_S2_Ashura" and v.Name ~= "Sonic_S3" and v.Name ~= "Sonic_S3_Red" and v.Name ~= "Tails_S3" and v.Name ~= "Knuckles_S3" and v.Name ~= "Knuckles_S3_Blue" and v.Name ~= "Metal_Sonic" and v.Name ~= "Rouge_S1" and v.Name ~= "Dr_Robotnik" and v.Name ~= "Shadow_S3" and v.Name ~= "Sonic_SCD" and v.Name ~= "Sonic_SCD_Rose" and v.Name ~= "Super_Sonic" then
+ v:Destroy()
+ end
+})
+Tab:AddButton({
  Name = "Delete Test Pushable Block!",
  Callback = function()
  game:GetService("ReplicatedStorage").Objects["TZ__Block_Pushable"]:Destroy()
@@ -2008,59 +2017,59 @@ Tab:AddButton({
  Name = "Unlock Peelout! (Only S1,S2,S3)",
  Callback = function()
  CharaProperties.tbl["Sonic_S2"].CanUsePeelout = true
-	CharaProperties.tbl["Sonic_S1"].CanUsePeelout = true
-	CharaProperties.tbl["Sonic_S3"].CanUsePeelout = true
+ CharaProperties.tbl["Sonic_S1"].CanUsePeelout = true
+ CharaProperties.tbl["Sonic_S3"].CanUsePeelout = true
  end
 })
 Tab:AddButton({
  Name = "Unlock Low Height!",
  Callback = function()
  CharaProperties.tbl["Sonic_S2"].Height = 10
-	CharaProperties.tbl["Sonic_S1"].Height = 10
-	CharaProperties.tbl["Knuckles_S3"].Height = 10
-	CharaProperties.tbl["Tails_S3"].Height = 10
+ CharaProperties.tbl["Sonic_S1"].Height = 10
+ CharaProperties.tbl["Knuckles_S3"].Height = 10
+ CharaProperties.tbl["Tails_S3"].Height = 10
  CharaProperties.tbl["Dr_Robotnik"].Height = 10
-	CharaProperties.tbl["Sonic_S3"].Height = 10
-	CharaProperties.tbl["Shadow_S3"].Height = 10
-	CharaProperties.tbl["Rouge_S1"].Height = 10
-	CharaProperties.tbl["Super_Sonic"].Height = 10
-	CharaProperties.tbl["Metal_Sonic"].Height = 10
-	CharaProperties.tbl["Sonic_SCD"].Height = 10
-	CharaProperties.tbl["Amy"].Height = 10
+ CharaProperties.tbl["Sonic_S3"].Height = 10
+ CharaProperties.tbl["Shadow_S3"].Height = 10
+ CharaProperties.tbl["Rouge_S1"].Height = 10
+ CharaProperties.tbl["Super_Sonic"].Height = 10
+ CharaProperties.tbl["Metal_Sonic"].Height = 10
+ CharaProperties.tbl["Sonic_SCD"].Height = 10
+ CharaProperties.tbl["Amy"].Height = 10
  end
 })
 Tab:AddButton({
  Name = "Unlock High Height!",
  Callback = function()
  CharaProperties.tbl["Sonic_S2"].Height = 50
-	CharaProperties.tbl["Sonic_S1"].Height = 50
-	CharaProperties.tbl["Knuckles_S3"].Height = 50
-	CharaProperties.tbl["Tails_S3"].Height = 50
-	CharaProperties.tbl["Dr_Robotnik"].Height = 50
-	CharaProperties.tbl["Sonic_S3"].Height = 50
-	CharaProperties.tbl["Shadow_S3"].Height = 50
-	CharaProperties.tbl["Rouge_S1"].Height = 50
-	CharaProperties.tbl["Super_Sonic"].Height = 50
-	CharaProperties.tbl["Metal_Sonic"].Height = 50
-	CharaProperties.tbl["Sonic_SCD"].Height = 50
-	CharaProperties.tbl["Amy"].Height = 50
+ CharaProperties.tbl["Sonic_S1"].Height = 50
+ CharaProperties.tbl["Knuckles_S3"].Height = 50
+ CharaProperties.tbl["Tails_S3"].Height = 50
+ CharaProperties.tbl["Dr_Robotnik"].Height = 50
+ CharaProperties.tbl["Sonic_S3"].Height = 50
+ CharaProperties.tbl["Shadow_S3"].Height = 50
+ CharaProperties.tbl["Rouge_S1"].Height = 50
+ CharaProperties.tbl["Super_Sonic"].Height = 50
+ CharaProperties.tbl["Metal_Sonic"].Height = 50
+ CharaProperties.tbl["Sonic_SCD"].Height = 50
+ CharaProperties.tbl["Amy"].Height = 50
  end
 })
 Tab:AddButton({
  Name = "Reset Heights!",
  Callback = function()
  CharaProperties.tbl["Sonic_S2"].Height = 20
-	CharaProperties.tbl["Sonic_S1"].Height = 20
-	CharaProperties.tbl["Knuckles_S3"].Height = 20
-	CharaProperties.tbl["Tails_S3"].Height = 15
-	CharaProperties.tbl["Dr_Robotnik"].Height = 20
-	CharaProperties.tbl["Sonic_S3"].Height = 20
-	CharaProperties.tbl["Shadow_S3"].Height = 20
-	CharaProperties.tbl["Rouge_S1"].Height = 20
-	CharaProperties.tbl["Super_Sonic"].Height = 20
-	CharaProperties.tbl["Metal_Sonic"].Height = 20
-	CharaProperties.tbl["Sonic_SCD"].Height = 20
-	CharaProperties.tbl["Amy"].Height = 18
+ CharaProperties.tbl["Sonic_S1"].Height = 20
+ CharaProperties.tbl["Knuckles_S3"].Height = 20
+ CharaProperties.tbl["Tails_S3"].Height = 15
+ CharaProperties.tbl["Dr_Robotnik"].Height = 20
+ CharaProperties.tbl["Sonic_S3"].Height = 20
+ CharaProperties.tbl["Shadow_S3"].Height = 20
+ CharaProperties.tbl["Rouge_S1"].Height = 20
+ CharaProperties.tbl["Super_Sonic"].Height = 20
+ CharaProperties.tbl["Metal_Sonic"].Height = 20
+ CharaProperties.tbl["Sonic_SCD"].Height = 20
+ CharaProperties.tbl["Amy"].Height = 18
  end
 })
 Tab:AddLabel("To be a character")
