@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI"))()
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.51", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.55", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 })
 OrionLib:MakeNotification({
  Name = "CSS Script Revolution V0.51!",
- Content = "New Update!Added Movement Window On Androids!",
+ Content = "New Update!Added New UI And More Music!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
