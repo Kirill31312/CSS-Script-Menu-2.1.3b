@@ -2111,16 +2111,29 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 Tab:AddButton({
- Name = "Open Dark Dex V3 Secure Bypass",
+ Name = "Open Dark Dex V4 Secure Bypass",
  Callback = function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
- end 
-})
-Tab:AddButton({
- Name = "Open Dex Explorer V2",
- Callback = function()
- getgenv().Key = "Bash"
- loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()
+ local decompsrc = game:HttpGet("https://raw.githubusercontent.com/w-a-e/Advanced-Decompiler-V3/main/init.lua", true)
+local function loaddecomp(decomptimeout)
+    local CONSTANTS = [[
+local ENABLED_REMARKS = {
+    NATIVE_REMARK = false,
+    INLINE_REMARK = false
+}
+local DECOMPILER_TIMEOUT = ]] .. decomptimeout .. [[
+    
+local READER_FLOAT_PRECISION = 99
+local SHOW_INSTRUCTION_LINES = false
+local SHOW_REFERENCES = false
+local SHOW_OPERATION_NAMES = false
+local SHOW_MISC_OPERATIONS = false
+local LIST_USED_GLOBALS = false
+local RETURN_ELAPSED_TIME = false
+]]
+    loadstring(string.gsub(decompsrc, ";;CONSTANTS HERE;;", CONSTANTS), "Advanced-Decompiler-V3")()
+end
+loaddecomp(1)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/t1ware/DexV5/main/dex-v2.lua'))()
  end 
 })
 Tab:AddButton({
