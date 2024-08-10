@@ -1969,6 +1969,75 @@ Tab:AddButton({
  game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "291053059"
  end 
 })
+Tab:AddLabel("TOREINA")
+Tab:AddButton({
+ Name = "Pulse Fighter!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "298773973"
+ end 
+})
+Tab:AddLabel("OMORI")
+Tab:AddButton({
+ Name = "Three Bar Logos!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "11196728830"
+ end 
+})
+Tab:AddLabel("Secret Base")
+Tab:AddButton({
+ Name = "Tanuki Remix? What",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "324431321"
+ end 
+})
+Tab:AddLabel("Tag Underground")
+Tab:AddButton({
+ Name = "Posseission!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "360710810"
+ end 
+})
+Tab:AddLabel("Tudd")
+Tab:AddButton({
+ Name = "Ruby Rampage Zone!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1557595099"
+ end 
+})
+Tab:AddLabel("Sonic EXE")
+Tab:AddButton({
+ Name = "... Zone!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "479133939"
+ end 
+})
+Tab:AddLabel("SilvaGunner")
+Tab:AddButton({
+ Name = "Metal Crusher Tetris Edition??? LOL",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "473060389"
+ end 
+})
+Tab:AddLabel("ROBLOX")
+Tab:AddButton({
+ Name = "Online Social Hangout!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "218338744"
+ end 
+})
+Tab:AddButton({
+ Name = "Explore ROBLOX!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "250281819"
+ end 
+})
+Tab:AddLabel("Sonic R")
+Tab:AddButton({
+ Name = "Livin' In The City (Radical City)!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "250281819"
+ end 
+})
 Tab:AddParagraph("Warning! If want more songs here...","If you want more songs here, go to the section (Suggestions)")
 local Tab = Window:MakeTab({
  Name = "OP Functions",
