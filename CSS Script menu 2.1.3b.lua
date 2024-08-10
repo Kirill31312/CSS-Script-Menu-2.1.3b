@@ -2004,38 +2004,17 @@ Tab:AddButton({
  game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "1557595099"
  end 
 })
-Tab:AddLabel("Sonic EXE")
-Tab:AddButton({
- Name = "... Zone!",
- Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "479133939"
- end 
-})
-Tab:AddLabel("SilvaGunner")
-Tab:AddButton({
- Name = "Metal Crusher Tetris Edition??? LOL",
- Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "473060389"
- end 
-})
-Tab:AddLabel("ROBLOX")
-Tab:AddButton({
- Name = "Online Social Hangout!",
- Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "218338744"
- end 
-})
-Tab:AddButton({
- Name = "Explore ROBLOX!",
- Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "250281819"
- end 
-})
 Tab:AddLabel("Sonic R")
 Tab:AddButton({
  Name = "Livin' In The City (Radical City)!",
  Callback = function()
- game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "250281819"
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "508029551"
+ end 
+})
+Tab:AddButton({
+ Name = "Super Sonic Racing!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "4584143727"
  end 
 })
 Tab:AddParagraph("Warning! If want more songs here...","If you want more songs here, go to the section (Suggestions)")
