@@ -2017,7 +2017,42 @@ Tab:AddButton({
  game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "4584143727"
  end 
 })
-Tab:AddParagraph("Warning! If want more songs here...","If you want more songs here, go to the section (Suggestions)")
+Tab:AddLabel("Final Fantasy X-2")
+Tab:AddButton({
+ Name = "Eternity!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "397610035"
+ end 
+})
+Tab:AddLabel("Anotsu")
+Tab:AddButton({
+ Name = "Man On The Run!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "332517296"
+ end 
+})
+Tab:AddLabel("ETIA")
+Tab:AddButton({
+ Name = "Tsugaru Rainbow!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "2885366262"
+ end 
+})
+Tab:AddLabel("Cittan")
+Tab:AddButton({
+ Name = "Little Wish!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "500763290"
+ end 
+})
+Tab:AddLabel("Kyary Pamyu Pamyu")
+Tab:AddButton({
+ Name = "Candy Candy!",
+ Callback = function()
+ game.Players.LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.Windows.Music.Frame.Custom.Text = "502997918"
+ end 
+})
+Tab:AddParagraph("Warning! If want more songs here...","If you want more songs here, go to the section (Channels)")
 local Tab = Window:MakeTab({
  Name = "OP Functions",
  Icon = "rbxassetid://4483345998",
