@@ -1,5 +1,5 @@
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI"))()
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.55", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI%20V2"))()
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.7", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -22,8 +22,8 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "CSS Script Revolution V0.51!",
- Content = "New Update!Added New UI And More Music!",
+ Name = "CSS Script Revolution V0.7!",
+ Content = "New Update!Added New Color From UI,Links Of Channels And More Music!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -2203,14 +2203,26 @@ Tab:AddButton({
  end 
 })
 local Tab = Window:MakeTab({
- Name = "Suggestions",
+ Name = "Channels",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
-Tab:AddParagraph("How use ideas about add new functions?","If you want ideas to add new function, then click in Button here and you will get a link to a video where to write your ideas")
+Tab:AddParagraph("Check out our channels to stay up to date with updates!")
 Tab:AddButton({
- Name = "Get Link on the video",
+ Name = "Get Link on Discord Server!",
  Callback = function()
- setclipboard(tostring("https://youtu.be/d1wh-dD-A3k?si=jpYMyc323WD1wejM"))
+ setclipboard(tostring("https://discord.gg/yUBtS45CNt"))
+ end 
+})
+Tab:AddButton({
+ Name = "Get Link on Discord Server 2!",
+ Callback = function()
+ setclipboard(tostring("https://discord.gg/hy6xHG9eXD"))
+ end 
+})
+Tab:AddButton({
+ Name = "Get Link on YouTube Channel!",
+ Callback = function()
+ setclipboard(tostring("https://www.youtube.com/@CSS_Exploits"))
  end 
 })
