@@ -2200,7 +2200,7 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 Tab:AddButton({
- Name = "Open Dark Dex V4 Secure Bypass",
+ Name = "Open Dex Explorer V2",
  Callback = function()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/dex2.0", true))()
  end 
