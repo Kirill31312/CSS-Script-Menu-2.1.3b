@@ -1,8 +1,9 @@
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI%20V2"))()
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.7", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI"))()
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.8", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
+local ValuePlayerID = nil
 local BeatLevelInst = 
  {
  ["Cmd"] = "Cleared",
@@ -22,8 +23,8 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "CSS Script Revolution V0.7!",
- Content = "New Update!Added New Color From UI,Links Of Channels And More Music!",
+ Name = "CSS Script Revolution V0.8!",
+ Content = "Added Make Infinity Level and Adding Players!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -572,9 +573,634 @@ local Tab = Window:MakeTab({
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
-Tab:AddParagraph("Coming Soon [In V0.8]!")
+Tab:AddButton({
+ Name = "Make Infinity Level!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 0,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = 3,
+            [2] = 10,
+            [3] = 1
+        },
+        [14] = 952,
+        [15] = 1,
+        [16] = 0,
+        [17] = 5,
+        [18] = 0,
+        [19] = 160,
+        [20] = 224,
+        [21] = 0,
+        [22] = 2,
+        [23] = 0,
+        [24] = 0,
+        [25] = {
+            [1] = 425,
+            [2] = 528,
+            [3] = 244,
+            [4] = 437,
+            [5] = 1
+        },
+        [26] = 1,
+        [27] = 1,
+        [28] = 0,
+        [29] = 0,
+        [30] = 1,
+        [31] = 255,
+        [32] = 255,
+        [33] = 255,
+        [34] = 255,
+        [35] = 255,
+        [36] = 255,
+        [37] = 255,
+        [38] = 255,
+        [39] = 255,
+        [40] = 1,
+        [41] = 1,
+        [42] = 1,
+        [43] = {
+            [1] = 193
+        },
+        [44] = 0,
+        [45] = 1,
+        [46] = 1,
+        [47] = 1,
+        [48] = 1,
+        [49] = {},
+        [50] = {}
+    },
+    [2] = "save"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+ end 
+})
+Tab:AddParagraph("Add more players to your custom levels!","WARNING!!! The level is always erased when using the function, so be careful!!!")
+Tab:AddParagraph("What is ID Player i should select?","1 - Sonic_S1, 2 - Sonic_S2, 3 - Sonic_S3, 4 - Tails_S3, 5 - Knuckles_S3, 6 - Amy, 7 - Metal_Sonic, 8 - Rouge_S1, 9 - Super_Sonic, 10 - Dr.Robotnik, 12 - Shadow_S3, 19 - Sonic_SCD")
+Tab:AddDropdown({
+ Name = "Select Player ID!",
+ Default = "1",
+ Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "12", "19"},
+ Callback = function(PlayerID)
+ IDPlayer = PlayerID
+ print(PlayerID)
+ end 
+})
+Tab:AddButton({
+ Name = "Add one player!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add two players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add three players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add four players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),         
+            [7] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add five players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add six players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add seven players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer),
+            [10] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add eight players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer),
+            [10] = tonumber(IDPlayer),
+            [11] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add nine players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer),
+            [10] = tonumber(IDPlayer),
+            [11] = tonumber(IDPlayer),
+            [12] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
+Tab:AddButton({
+ Name = "Add ten players!",
+ Callback = function()
+ local args = {
+    [1] = {
+        [1] = 1,
+        [2] = 9,
+        [3] = 1,
+        [4] = 39,
+        [5] = 133,
+        [6] = {
+            [1] = {
+                [1] = 1,
+                [2] = 1,
+                [3] = 1,
+                [4] = 1,
+                [5] = 1,
+                [6] = 1
+            },
+            [2] = {
+                [1] = 4,
+                [2] = 4,
+                [3] = 4,
+                [4] = 4,
+                [5] = 4,
+                [6] = 4
+            }
+        },
+        [7] = {},
+        [8] = 44,
+        [9] = 172,
+        [10] = 628,
+        [11] = 92,
+        [12] = 3,
+        [13] = {
+            [1] = nil,
+            [2] = nil,
+            [3] = nil,
+            [4] = tonumber(IDPlayer),
+            [5] = tonumber(IDPlayer),
+            [6] = tonumber(IDPlayer),
+            [7] = tonumber(IDPlayer),
+            [8] = tonumber(IDPlayer),
+            [9] = tonumber(IDPlayer),
+            [10] = tonumber(IDPlayer),
+            [11] = tonumber(IDPlayer),
+            [12] = tonumber(IDPlayer),
+            [13] = tonumber(IDPlayer)
+        },
+    },
+    [2] = "saveExit"
+}
+game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
+
+game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
+end
+})
 local Tab = Window:MakeTab({
- Name = "Manage My Levels",
+ Name = "Manage My Level",
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
@@ -2192,8 +2818,9 @@ local Tab = Window:MakeTab({
  Icon = "rbxassetid://4483345998",
  PremiumOnly = false
 })
+Tab:AddParagraph("Many thanks to Tema_Suhar for the scripts!"," ")
 Tab:AddParagraph("Scripters","Kirill228 & Tema_Suhar")
-Tab:AddParagraph("Name this UI Script","Orion Hub")
+Tab:AddParagraph("Name this UI Script","Astereo Hub")
 local Tab = Window:MakeTab({
  Name = "All Hot-Scripts",
  Icon = "rbxassetid://4483345998",
