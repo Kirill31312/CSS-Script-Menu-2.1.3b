@@ -1,5 +1,6 @@
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI"))()
-local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.8", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kirill31312/Astereo-Library/main/Astereo%20UI%20Wave"))()
+local Window = OrionLib:MakeWindow({Name = "Classic Sonic Simulator V12 Script Revolution V0.9", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.lshieldget.Playing = true
 local SlotID = 1
 local LevelCreateID = 1
 local antiError = 1
@@ -23,8 +24,8 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 OrionLib:MakeNotification({
- Name = "CSS Script Revolution V0.8!",
- Content = "Added Make Infinity Level and Adding Players!",
+ Name = "CSS Script Revolution V0.9!",
+ Content = "Added Sounds (Alpha) and New Functions!",
  Image = "rbxassetid://4483345998",
  Time = 10
 })
@@ -526,48 +527,6 @@ Tab:AddButton({
  game:GetService("ReplicatedStorage").Spritesheets.Objects_General_SCD.Value = 13804832490
  end 
 })
-Tab:AddParagraph("Huge Texture Packs!")
-Tab:AddButton({
- Name = "Enable Sonic EXE Texture Pack!",
- Callback = function()
-while game:GetService("RunService").RenderStepped:Wait() do
-			if BrokePack == true then break end
-			game:GetService("ReplicatedStorage").Objects.Sonic_S1.Sprite.Image = "rbxassetid://8351052419"
-			if game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.SoundId == "rbxassetid://304472067" then
-				game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.PlaybackSpeed = 1
-				game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Intro.TimePosition = 9999
-				game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.SoundId = "rbxassetid://1427189017"
-			elseif game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.SoundId ~= "rbxassetid://1427189017" then
-				game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.PlaybackSpeed = 0.5
-			end
-			for i,v in pairs(game.Players.LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Tiles:GetChildren()) do
-				v.ImageColor3 = Color3.new(1, 0, 0)
-			end
-			for i,v in pairs(game.Players.LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.Engine:GetChildren()) do
-				if v.ClassName == "Sound" then
-					v.PlaybackSpeed = 0.75
-				end
-			end
-			for i,v in pairs(game.Players.LocalPlayer.PlayerGui:WaitForChild("Game").Backdrop.Main.World.Objects:GetDescendants()) do
-				if v.ClassName == "ImageLabel" then
-					v.ImageColor3 = Color3.new(1, 0, 0)
-				end
-			end
-		end
-		-- The function that takes place when the button is pressed
-	end,
-})
-Tab:AddButton({
- Name = "Disable Sonic EXE Texture Pack!",
- Callback = function()
- BrokePack = true
-	wait(0.5)
-	game.Players.LocalPlayer.PlayerGui:WaitForChild("MusicHandler")["Music Script"].Loop.PlaybackSpeed = 1
-	BrokePack = false
-	game:GetService("ReplicatedStorage").Objects.Sonic_S1.Sprite.Image = "rbxassetid://8769231388"
-	game:GetService("ReplicatedStorage").Objects.Sonic_SCD.Sprite.Image = "rbxassetid://8769231388"
- end 
-})
 local Tab = Window:MakeTab({
  Name = "Crazy Functions",
  Icon = "rbxassetid://4483345998",
@@ -579,7 +538,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 0,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -608,9 +567,18 @@ Tab:AddButton({
         [11] = 92,
         [12] = 3,
         [13] = {
-            [1] = 3,
-            [2] = 10,
-            [3] = 1
+            [1] = 1,
+            [2] = 2,
+            [3] = 3,
+            [4] = 4,
+            [5] = 5,
+            [6] = 6,
+            [7] = 7,
+            [8] = 8,
+            [9] = 9,
+            [10] = 10,
+            [11] = 11,
+            [12] = 12
         },
         [14] = 952,
         [15] = 1,
@@ -664,11 +632,11 @@ game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpac
  end 
 })
 Tab:AddParagraph("Add more players to your custom levels!","WARNING!!! The level is always erased when using the function, so be careful!!!")
-Tab:AddParagraph("What is ID Player i should select?","1 - Sonic_S1, 2 - Sonic_S2, 3 - Sonic_S3, 4 - Tails_S3, 5 - Knuckles_S3, 6 - Amy, 7 - Metal_Sonic, 8 - Rouge_S1, 9 - Super_Sonic, 10 - Dr.Robotnik, 12 - Shadow_S3, 19 - Sonic_SCD")
+Tab:AddParagraph("What is ID Player i should select?","1 - Sonic_S1, 2 - Sonic_S2, 3 - Sonic_S3, 4 - Tails_S3, 5 - Knuckles_S3, 6 - Amy, 7 - Metal_Sonic, 8 - Dr.Robotnik, 9 - Super_Sonic, 10 - Shadow_S3, 11 - Rouge_S1, 12 - Sonic_SCD")
 Tab:AddDropdown({
  Name = "Select Player ID!",
  Default = "1",
- Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "12", "19"},
+ Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"},
  Callback = function(PlayerID)
  IDPlayer = PlayerID
  print(PlayerID)
@@ -680,7 +648,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -728,7 +696,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -777,7 +745,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -827,7 +795,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -878,7 +846,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -930,7 +898,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -983,7 +951,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -1037,7 +1005,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -1092,7 +1060,7 @@ Tab:AddButton({
  local args = {
     [1] = {
         [1] = 1,
-        [2] = 9,
+        [2] = tonumber(LevelCreateID),
         [3] = 1,
         [4] = 39,
         [5] = 133,
@@ -1133,63 +1101,6 @@ Tab:AddButton({
             [10] = tonumber(IDPlayer),
             [11] = tonumber(IDPlayer),
             [12] = tonumber(IDPlayer)
-        },
-    },
-    [2] = "saveExit"
-}
-game:GetService("ReplicatedStorage").Remotes.LevelEditorCommand:FireServer(unpack(args))
-
-game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator:Destroy()
-end
-})
-Tab:AddButton({
- Name = "Add ten players!",
- Callback = function()
- local args = {
-    [1] = {
-        [1] = 1,
-        [2] = 9,
-        [3] = 1,
-        [4] = 39,
-        [5] = 133,
-        [6] = {
-            [1] = {
-                [1] = 1,
-                [2] = 1,
-                [3] = 1,
-                [4] = 1,
-                [5] = 1,
-                [6] = 1
-            },
-            [2] = {
-                [1] = 4,
-                [2] = 4,
-                [3] = 4,
-                [4] = 4,
-                [5] = 4,
-                [6] = 4
-            }
-        },
-        [7] = {},
-        [8] = 44,
-        [9] = 172,
-        [10] = 628,
-        [11] = 92,
-        [12] = 3,
-        [13] = {
-            [1] = nil,
-            [2] = nil,
-            [3] = nil,
-            [4] = tonumber(IDPlayer),
-            [5] = tonumber(IDPlayer),
-            [6] = tonumber(IDPlayer),
-            [7] = tonumber(IDPlayer),
-            [8] = tonumber(IDPlayer),
-            [9] = tonumber(IDPlayer),
-            [10] = tonumber(IDPlayer),
-            [11] = tonumber(IDPlayer),
-            [12] = tonumber(IDPlayer),
-            [13] = tonumber(IDPlayer)
         },
     },
     [2] = "saveExit"
@@ -1240,7 +1151,6 @@ local Tab = Window:MakeTab({
  PremiumOnly = false
 })
 Tab:AddLabel("Sounds")
-Tab:AddLabel("Menu Sounds")
 Tab:AddButton({
  Name = "Play Sound Back!",
  Callback = function()
@@ -1310,12 +1220,6 @@ Tab:AddButton({
  end
 })
 Tab:AddLabel("Sonic 1 Sounds")
-Tab:AddButton({
- Name = "Play Sound Sonic GAME OVER!",
- Callback = function()
- game:GetService("ReplicatedStorage").Game.Backdrop.Main.Engine.GameOverS1.Playing = true
- end
-})
 Tab:AddButton({
  Name = "Play Sound Sonic GAME OVER!",
  Callback = function()
@@ -1717,7 +1621,7 @@ Tab:AddButton({
  end 
 })
 Tab:AddButton({
- Name = "Insert Small Angel Island Breakable Rock!",
+ Name = "Insert Small Angel Island Breakable Rock (Jump to Break)!",
  Callback = function()
  Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
@@ -1725,7 +1629,15 @@ Tab:AddButton({
  game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 146
  end 
 })
-
+Tab:AddButton({
+ Name = "Insert Small Angel Island Breakable Rock (Spindash to Break)!",
+ Callback = function()
+ Instance.new("NumberValue",game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring)
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId:Destroy()
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.Value.Name = "ObjId"
+ game:GetService("Players").LocalPlayer.PlayerGui.LevelCreator.Backdrop.Screen.ObjectsList.Ring.Ring.ObjId.Value = 143
+ end 
+})
 Tab:AddButton({
  Name = "Insert Solid Wall 4!",
  Callback = function()
@@ -2699,6 +2611,21 @@ Tab:AddButton({
  game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Game"):Destroy()
  end
 })
+Tab:AddButton({
+ Name = "Beat Special Stage Now in One Click!",
+ Callback = function()
+ local A_1 = true
+ local A_2 = 64
+ local Event = game:GetService("ReplicatedStorage").Remotes.LeaveStage
+ Event:FireServer(A_1, A_2)
+ local A_1 = "Stages3"
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPublishedCreations
+ Event:InvokeServer(A_1)
+ local Event = game:GetService("ReplicatedStorage").Remotes.GetPlayerSettings
+ Event:InvokeServer()
+ game:GetService("Players").LocalPlayer.PlayerGui.S3SpecialStage:Destroy()
+ end
+})
 Tab:AddLabel("To be a character")
 Tab:AddParagraph("How to be a admin Character","To do this, just click on any button and go to ANY level. And you will become the character you clicked on now")
 Tab:AddButton({
@@ -2850,6 +2777,12 @@ Tab:AddButton({
  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
  end 
 })
+local Tab = Window:MakeTab({
+ Name = "Settings",
+ Icon = "rbxassetid://4483345998",
+ PremiumOnly = false
+})
+Tab:AddParagraph("Comming Soon! (In V0.95)"," ")
 local Tab = Window:MakeTab({
  Name = "Channels",
  Icon = "rbxassetid://4483345998",
